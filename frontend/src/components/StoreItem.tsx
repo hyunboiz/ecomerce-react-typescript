@@ -5,9 +5,9 @@ interface StoreItem {
     id: number;
     name: string;
     price: number;
-    image: string
+    images: string
 }
-function StoreItem({id, name, price, image} : StoreItem)  {
+function StoreItem({id, name, price, images} : StoreItem)  {
     const { getQuantity, increaseQuantity, decreaseQuantity, removeFromCart } = useCart()
     const quantity = getQuantity(id)
 
@@ -15,7 +15,7 @@ function StoreItem({id, name, price, image} : StoreItem)  {
 
         <Card>
             <CardBody>
-                <CardImg src={image}></CardImg>
+                <CardImg src={images}></CardImg>
                 <CardTitle className="text-center">{name}</CardTitle>
                 <CardText>Price: ${formatCurrency(price)}</CardText>
                 {quantity === 0 ? (

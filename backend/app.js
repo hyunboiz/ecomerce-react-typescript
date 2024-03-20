@@ -9,7 +9,7 @@ require('dotenv/config')
 
 const api = process.env.API_URL
 
-const PORT = 6666
+const PORT = 6060
 
 app.use('/api/v1', apiRoutes)
 
